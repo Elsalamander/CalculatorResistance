@@ -1,38 +1,47 @@
 package com.example.calculatorresistance
 
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.navigation.*
+import androidx.navigation.fragment.fragment
+import com.example.calculatorresistance.myView.FragmentProva3
+import dalvik.system.PathClassLoader
 import it.elsalamander.loaderclass.AbstractLoadClass
-import it.elsalamander.loaderclass.calculator.data.OperationDataHelper
-import it.elsalamander.loaderclass.calculator.data.OperationDataParameters
-import it.elsalamander.loaderclass.calculator.data.OperationDataResult
-import it.elsalamander.loaderclass.calculator.data.builder.OperationDataResultBuilder
-import org.json.JSONObject
 
-class conscreteLoadClass : AbstractLoadClass() {
 
-    private val helpers = ArrayList<OperationDataHelper>()
-
-    init{
-        helpers.add(OperationDataHelper("Resistance From V,I", listOf("V","I","R")))
-    }
-
-    override fun addInfoToSharedFile(jsonObject: JSONObject) {
-        this.addDataToJSONCache(jsonObject)
-        R.id.provaId
-    }
-
-    override fun calcola(param: OperationDataParameters): OperationDataResult {
-        val V = param.getParameters()["V"]
-        val I = param.getParameters()["I"]
-
-        val buildRes = OperationDataResultBuilder(param)
-        if (V != null && I != null) {
-            buildRes.addResult("R", V/I)
+class conscreteLoadClass : AbstractLoadClass(MyOperation()) {
+    companion object{
+        object nav_routes {
+            const val home = "home"
+            const val plant_detail = "plant_detail"
         }
-        return buildRes.build()
     }
 
-    override fun getHelperList(): List<OperationDataHelper> {
-        return this.helpers
+    override fun getNavGraph(navController: NavController, loader: PathClassLoader, fm: FragmentManager, context: AppCompatActivity): NavGraph {
+        //FragmentProva::class.java.newInstance()
+        //loader.loadClass(FragmentProva3::class.java.name)
+
+
+        //fm.beginTransaction().add(FragmentProva3(), nav_routes.home)
+
+        val tmp = navController.createGraph(startDestination = nav_routes.home) {
+        //    fragment<FragmentProva3>(nav_routes.home) {
+        //        label = "prova3"
+        //        id
+        //    }
+        }
+        return tmp
+    }
+
+    override fun getTitle(): String {
+        return "Calculator Resistance"
+    }
+
+    override fun getDescription(): String {
+        return "Specializzata per resistenze"
     }
 
 }
