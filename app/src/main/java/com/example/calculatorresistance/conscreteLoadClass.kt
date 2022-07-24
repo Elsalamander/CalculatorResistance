@@ -1,12 +1,17 @@
 package com.example.calculatorresistance
 
 import android.content.Context
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.example.calculatorresistance.myView.FragmentResistance
 import it.elsalamander.loaderclass.AbstractLoadClass
+import it.elsalamander.loaderclass.Holder
+
+import it.elsalamander.loaderclass.OnStartUpExtension
+import it.elsalamander.loaderclass.calculator.execute.Calculator
 
 
-class conscreteLoadClass : AbstractLoadClass(MyOperation()) {
+class conscreteLoadClass : AbstractLoadClass(MyOperation()), OnStartUpExtension {
 
 
     override fun getTitle(): String {
@@ -20,5 +25,10 @@ class conscreteLoadClass : AbstractLoadClass(MyOperation()) {
     override fun getFragment(context: Context): Fragment {
         return FragmentResistance(context)
     }
+
+    override fun doOnStartUp(param: Holder, newLoad: Boolean) {
+        Log.d("Test loading", "LOADING TEST-------------------------------------")
+    }
+
 
 }
