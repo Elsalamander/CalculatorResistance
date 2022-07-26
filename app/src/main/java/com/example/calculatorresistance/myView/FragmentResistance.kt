@@ -7,7 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-
+/****************************************************************
+ * Fragment dell'estensione
+ *
+ * @author: Elsalamander
+ * @data: 14 luglio 2022
+ * @version: v1.0
+ ****************************************************************/
 class FragmentResistance(val cont: Context) : Fragment() {
 
     val layout = MyViewFactory()

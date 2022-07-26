@@ -18,6 +18,13 @@ import kotlin.properties.Delegates
  * colorText.setBackgroundColor(0x00FF00)
  * colorText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10f)
  */
+/****************************************************************
+ * Builder della View
+ *
+ * @author: Elsalamander
+ * @data: 14 luglio 2022
+ * @version: v1.0
+ ****************************************************************/
 class MyViewFactory {
 
     companion object{

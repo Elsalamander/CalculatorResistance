@@ -10,7 +10,13 @@ import it.elsalamander.loaderclass.Holder
 import it.elsalamander.loaderclass.OnStartUpExtension
 import it.elsalamander.loaderclass.calculator.execute.Calculator
 
-
+/****************************************************************
+ * Classe da caricare dell'estensione
+ *
+ * @author: Elsalamander
+ * @data: 14 luglio 2022
+ * @version: v1.0
+ ****************************************************************/
 class conscreteLoadClass : AbstractLoadClass(MyOperation()), OnStartUpExtension {
 
 

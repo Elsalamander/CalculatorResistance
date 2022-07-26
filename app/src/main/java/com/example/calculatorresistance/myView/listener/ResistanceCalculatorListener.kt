@@ -6,6 +6,13 @@ import android.widget.EditText
 import com.example.calculatorresistance.MyOperation
 import com.example.calculatorresistance.myView.MyViewFactory
 
+/****************************************************************
+ * Evento quando viene premuto un tasto nelle editText
+ *
+ * @author: Elsalamander
+ * @data: 14 luglio 2022
+ * @version: v1.0
+ ****************************************************************/
 class ResistanceCalculatorListener(val myOperation: MyOperation, val myLayout : MyViewFactory) : View.OnKeyListener{
 
     /**

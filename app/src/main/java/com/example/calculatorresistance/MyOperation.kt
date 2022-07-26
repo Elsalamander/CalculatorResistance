@@ -6,6 +6,13 @@ import it.elsalamander.loaderclass.calculator.data.OperationDataParameters
 import it.elsalamander.loaderclass.calculator.data.OperationDataResult
 import it.elsalamander.loaderclass.calculator.data.builder.OperationDataResultBuilder
 
+/****************************************************************
+ * Classe nella quale viene descritta l'operazione da eseguire
+ *
+ * @author: Elsalamander
+ * @data: 14 luglio 2022
+ * @version: v1.0
+ ****************************************************************/
 class MyOperation : Operation() {
     private val helpers = ArrayList<OperationDataHelper>()
 
