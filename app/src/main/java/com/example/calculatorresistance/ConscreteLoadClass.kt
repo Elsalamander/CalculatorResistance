@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import com.example.calculatorresistance.myView.FragmentResistance
 import it.elsalamander.loaderclass.AbstractLoadClass
 import it.elsalamander.loaderclass.Holder
-
 import it.elsalamander.loaderclass.OnStartUpExtension
-import it.elsalamander.loaderclass.calculator.execute.Calculator
 
 /****************************************************************
  * Classe da caricare dell'estensione
@@ -17,7 +15,7 @@ import it.elsalamander.loaderclass.calculator.execute.Calculator
  * @data: 14 luglio 2022
  * @version: v1.0
  ****************************************************************/
-class conscreteLoadClass : AbstractLoadClass(MyOperation()), OnStartUpExtension {
+class ConscreteLoadClass : AbstractLoadClass(MyOperation()), OnStartUpExtension {
 
 
     override fun getTitle(): String {

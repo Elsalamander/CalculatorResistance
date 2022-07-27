@@ -13,7 +13,7 @@ import com.example.calculatorresistance.myView.MyViewFactory
  * @data: 14 luglio 2022
  * @version: v1.0
  ****************************************************************/
-class ResistanceCalculatorListener(val myOperation: MyOperation, val myLayout : MyViewFactory) : View.OnKeyListener{
+class ResistanceCalculatorListener(private val myOperation: MyOperation, private val myLayout : MyViewFactory) : View.OnKeyListener{
 
     /**
      * Called when a hardware key is dispatched to a view. This allows listeners to
@@ -72,7 +72,7 @@ class ResistanceCalculatorListener(val myOperation: MyOperation, val myLayout : 
 
             return true
         }
-        return false;
+        return false
     }
 
 }

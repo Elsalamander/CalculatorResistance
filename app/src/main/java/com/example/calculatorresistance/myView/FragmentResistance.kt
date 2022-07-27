@@ -14,13 +14,12 @@ import androidx.fragment.app.Fragment
  * @data: 14 luglio 2022
  * @version: v1.0
  ****************************************************************/
-class FragmentResistance(val cont: Context) : Fragment() {
+class FragmentResistance(private val cont: Context) : Fragment() {
 
-    val layout = MyViewFactory()
+    private val layout = MyViewFactory()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = layout.createLayout(cont)
-        return view
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        return layout.createLayout(cont)
     }
 
 }

@@ -33,20 +33,20 @@ class MyViewFactory {
         const val NAME_RESISTANCE = "Resistenza"
     }
 
-    lateinit var mylayout : LinearLayout
+    private lateinit var mylayout : LinearLayout
 
-    var dp10 by Delegates.notNull<Int>()
-    var dp15 by Delegates.notNull<Int>()
-    var dp20 by Delegates.notNull<Int>()
-    var dp40 by Delegates.notNull<Int>()
-    var dp60 by Delegates.notNull<Int>()
-    var dp100 by Delegates.notNull<Int>()
-    var dp120 by Delegates.notNull<Int>()
-    var dp200 by Delegates.notNull<Int>()
+    private var dp10 by Delegates.notNull<Int>()
+    private var dp15 by Delegates.notNull<Int>()
+    private var dp20 by Delegates.notNull<Int>()
+    private var dp40 by Delegates.notNull<Int>()
+    private var dp60 by Delegates.notNull<Int>()
+    private var dp100 by Delegates.notNull<Int>()
+    private var dp120 by Delegates.notNull<Int>()
+    private var dp200 by Delegates.notNull<Int>()
 
     val value = TreeMap<String, EditText>()
 
-    val myOperation = MyOperation()
+    private val myOperation = MyOperation()
 
     fun createLayout(context: Context): View {
         this.setParameters(context)
@@ -93,7 +93,7 @@ class MyViewFactory {
     /**
      * Crea il layout per la parte della calcolatrice
      */
-    private fun getCalculatorLayout(context: Context): View? {
+    private fun getCalculatorLayout(context: Context): View {
         val calcLayout = LinearLayout(context)
         calcLayout.orientation = LinearLayout.VERTICAL
         //parametri
@@ -150,7 +150,7 @@ class MyViewFactory {
     /**
      * Crea il loyout per la parte dei colori
      */
-    private fun getColorCodeLayout(context: Context): View? {
+    private fun getColorCodeLayout(context: Context): View {
         val layout = LinearLayout(context)
         layout.orientation = LinearLayout.VERTICAL
 
